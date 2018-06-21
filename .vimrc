@@ -3,6 +3,8 @@ set shiftwidth=4
 set number
 set history=200
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
