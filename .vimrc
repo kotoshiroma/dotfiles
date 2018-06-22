@@ -1,8 +1,14 @@
+filetype plugin on
 set tabstop=4
 set shiftwidth=4
 set number
 set history=200
 map <C-n> :NERDTreeToggle<CR>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <silent> jj <ESC>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
@@ -10,7 +16,7 @@ nnoremap <silent> ]b :bnext<CR>
 if 0 | endif
 
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 
 set runtimepath+=~/.vim/bundle/neobundle.vim/
