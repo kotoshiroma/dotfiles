@@ -28,6 +28,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'jacoborus/tender.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
