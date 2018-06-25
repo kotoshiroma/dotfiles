@@ -9,6 +9,25 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 inoremap <silent> jj <ESC>
+
+"ウィンドウ、タブ操作
+nnoremap s <Nop>
+nnoremap ss :split<CR>
+nnoremap sv :vsplit<CR>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+
+nnoremap st :tabnew<CR>
+nnoremap sn gt
+nnoremap sp gT
+nnoremap sc :tabclose<CR>
+
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
