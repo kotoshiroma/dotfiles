@@ -1,6 +1,6 @@
 filetype plugin on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set number
 set history=200
 map <C-n> :NERDTreeToggle<CR>
@@ -47,6 +47,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'jacoborus/tender.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'cohama/lexima.vim'
 
 call neobundle#end()
 
