@@ -9,6 +9,10 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 inoremap <silent> jj <ESC>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
 
 "ウィンドウ、タブ操作
 nnoremap s <Nop>
