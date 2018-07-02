@@ -3,6 +3,8 @@ set tabstop=2
 set shiftwidth=2
 set number
 set history=200
+set incsearch
+
 map <C-n> :NERDTreeToggle<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -14,7 +16,7 @@ inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 
-"ウィンドウ、タブ操作
+"ウィンドウ操作
 nnoremap s <Nop>
 nnoremap ss :split<CR>
 nnoremap sv :vsplit<CR>
@@ -26,12 +28,14 @@ nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
-
+"タブ操作
 nnoremap st :tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sc :tabclose<CR>
 
+
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
@@ -48,10 +52,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'jacoborus/tender.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'cohama/lexima.vim'
+NeoBundle 'jacoborus/tender.vim' "カラースキーム
+NeoBundle 'tomasr/molokai'       "カラースキーム
+NeoBundle 'scrooloose/nerdtree'  "ディレクトリツリー表示
+NeoBundle 'cohama/lexima.vim'    "閉じカッコ補完
 
 call neobundle#end()
 
