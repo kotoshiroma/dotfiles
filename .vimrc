@@ -3,7 +3,9 @@ set tabstop=2
 set shiftwidth=2
 set number
 set history=200
+set hlsearch
 set incsearch
+autocmd ColorScheme * highlight Visual ctermfg=245
 
 map <C-n> :NERDTreeToggle<CR>
 noremap <Up> <Nop>
@@ -38,6 +40,7 @@ nnoremap sc :tabclose<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> <C-l> : <C-u>nohlsearch<CR><C-l>
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
@@ -56,6 +59,8 @@ NeoBundle 'jacoborus/tender.vim' "カラースキーム
 NeoBundle 'tomasr/molokai'       "カラースキーム
 NeoBundle 'scrooloose/nerdtree'  "ディレクトリツリー表示
 NeoBundle 'cohama/lexima.vim'    "閉じカッコ補完
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'nelstrom/vim-visual-star-search'
 
 call neobundle#end()
 
