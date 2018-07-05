@@ -1,8 +1,12 @@
 filetype plugin on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set number
 set history=200
+set hlsearch
+set incsearch
+autocmd ColorScheme * highlight Visual ctermfg=245
+
 map <C-n> :NERDTreeToggle<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -12,7 +16,7 @@ inoremap <silent> jj <ESC>
 
 "ウィンドウ、タブ操作
 nnoremap s <Nop>
-nnoremap ss :split<CR>
+nnoremap sf :split<CR>
 nnoremap sv :vsplit<CR>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -27,9 +31,11 @@ nnoremap st :tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sc :tabclose<CR>
+"ウィンドウ、タブ操作(終わり)
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> <C-l> : <C-u>nohlsearch<CR><C-l>
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
@@ -48,6 +54,7 @@ NeoBundle 'jacoborus/tender.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'nelstrom/vim-visual-star-search'
 
 call neobundle#end()
 
