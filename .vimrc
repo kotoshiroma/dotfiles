@@ -18,7 +18,7 @@ inoremap <C-f> <Right>
 
 "ウィンドウ操作
 nnoremap s <Nop>
-nnoremap ss :split<CR>
+nnoremap sf :split<CR>
 nnoremap sv :vsplit<CR>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -31,7 +31,7 @@ nnoremap sH <C-w>H
 "タブ操作
 nnoremap st :tabnew<CR>
 nnoremap sn gt
-nnoremap sp gT
+nnoremap sb gT
 nnoremap sc :tabclose<CR>
 
 
