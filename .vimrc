@@ -13,8 +13,12 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 inoremap <silent> jj <ESC>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
 
-"ウィンドウ、タブ操作
+"ウィンドウ操作
 nnoremap s <Nop>
 nnoremap sf :split<CR>
 nnoremap sv :vsplit<CR>
@@ -26,13 +30,14 @@ nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
-
+"タブ操作
 nnoremap st :tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sc :tabclose<CR>
-"ウィンドウ、タブ操作(終わり)
 
+
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> <C-l> : <C-u>nohlsearch<CR><C-l>
@@ -50,9 +55,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'jacoborus/tender.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jacoborus/tender.vim' "カラースキーム
+NeoBundle 'tomasr/molokai'       "カラースキーム
+NeoBundle 'scrooloose/nerdtree'  "ディレクトリツリー表示
+NeoBundle 'cohama/lexima.vim'    "閉じカッコ補完
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'nelstrom/vim-visual-star-search'
 
