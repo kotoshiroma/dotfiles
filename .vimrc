@@ -1,18 +1,26 @@
 filetype plugin on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set number
 set history=200
+set hlsearch
+set incsearch
+autocmd ColorScheme * highlight Visual ctermfg=245
+
 map <C-n> :NERDTreeToggle<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 inoremap <silent> jj <ESC>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
 
-"ウィンドウ、タブ操作
+"ウィンドウ操作
 nnoremap s <Nop>
-nnoremap ss :split<CR>
+nnoremap sf :split<CR>
 nnoremap sv :vsplit<CR>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -22,14 +30,17 @@ nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
-
+"タブ操作
 nnoremap st :tabnew<CR>
 nnoremap sn gt
-nnoremap sp gT
+nnoremap sb gT
 nnoremap sc :tabclose<CR>
 
+
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> <C-l> : <C-u>nohlsearch<CR><C-l>
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
@@ -44,9 +55,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'jacoborus/tender.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jacoborus/tender.vim' "カラースキーム
+NeoBundle 'tomasr/molokai'       "カラースキーム
+NeoBundle 'scrooloose/nerdtree'  "ディレクトリツリー表示
+NeoBundle 'cohama/lexima.vim'    "閉じカッコ補完
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'nelstrom/vim-visual-star-search'
 
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle "Shougo/neosnippet"
