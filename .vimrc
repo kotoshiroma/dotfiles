@@ -42,6 +42,12 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> <C-l> : <C-u>nohlsearch<CR><C-l>
 
+augroup MyHTML
+	autocmd!
+	autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
+
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
