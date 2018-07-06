@@ -68,6 +68,8 @@ NeoBundle 'cohama/lexima.vim'    "閉じカッコ補完
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'nelstrom/vim-visual-star-search'
 
+NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}} "JSのシンタックスハイライト
+
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle "Shougo/neosnippet"
 NeoBundle 'Shougo/neosnippet-snippets'
