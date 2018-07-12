@@ -1,4 +1,4 @@
-filetype plugin on
+filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set number
@@ -69,14 +69,13 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'nelstrom/vim-visual-star-search'
 
 NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}} "JSのシンタックスハイライト
+NeoBundle 'scrooloose/syntastic' "構文チェッカー
 
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle "Shougo/neosnippet"
 NeoBundle 'Shougo/neosnippet-snippets'
 
 call neobundle#end()
-
-filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -108,3 +107,15 @@ if neobundle#is_installed('neocomplete.vim')
     " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ・・・・・・③
     imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
 endif
+
+"----------------------------------------------------------
+" syntasticの設定
+"----------------------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
