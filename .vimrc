@@ -1,4 +1,5 @@
 filetype plugin indent on
+set autoindent
 set tabstop=2
 set shiftwidth=2
 set number
@@ -6,6 +7,8 @@ set history=200
 set hlsearch
 set incsearch
 autocmd ColorScheme * highlight Visual ctermfg=245
+" mjs は javascript モード
+autocmd BufNewFile,BufRead *.mjs set ft=javascript
 
 map <C-n> :NERDTreeToggle<CR>
 noremap <Up> <Nop>
@@ -119,3 +122,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
